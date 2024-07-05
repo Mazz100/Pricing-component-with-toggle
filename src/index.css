@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .test {
-  color: #f6f6fe;
+  color: #f6f6fe !important;
 }

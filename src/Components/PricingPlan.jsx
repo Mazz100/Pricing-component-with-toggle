@@ -27,10 +27,10 @@ const PricingPlan = () => {
       {plans.map((plan, idx) => (
         <div
           className={clsx(
-            "w-full rounded-md bg-[#fff] p-7 text-text-main-color shadow-md",
+            "bg-white w-full rounded-md p-7 text-text-main-color shadow-md",
             //Professional plan style
             idx === 1 &&
-              "bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90% text-[white] lg:py-10",
+              "text-white bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90% lg:py-10",
           )}
           key={idx}
         >
@@ -55,10 +55,10 @@ const PricingPlan = () => {
             className={clsx(
               "block rounded-md bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90% p-3 text-xs font-semibold uppercase tracking-widest text-[#fff]",
               //Interactive states
-              "transition-colors hover:border-[1px] hover:bg-none hover:text-link-text-color",
+              "hover:ring-border-hover-color hover:to-white hover:from-white transition-colors duration-150 ease-in hover:text-[#696fdd] hover:ring-[1px] focus-visible:outline-offset-4 focus-visible:outline-[#696fdd]",
               //professional plan link
               idx === 1 &&
-                "bg-[white] bg-none text-link-text-color hover:bg-[transparent] hover:text-[white]",
+                "bg-white bg-none text-link-text-color hover:bg-[transparent] hover:text-[#fff] hover:ring-[1px] hover:ring-[#ffffff] focus-visible:outline-[#fff]",
             )}
             href="#"
           >
