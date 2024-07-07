@@ -14,11 +14,14 @@ export default {
 
       backgroundColor: {
         "body-bg-color": "#f7f7ff",
+        "primary-bg-color": "#696fdd",
+        "interative-hover-bg": "#c6c7f3",
       },
 
       gradientColorStops: {
         "top-left-gradient": "#a3a8f0",
         "bottom-right-gradient": "#696fdd",
+        "interative-hover-bg": "#c6c7f3",
       },
 
       /* colors: {
@@ -29,8 +32,13 @@ export default {
       }, */
 
       ringColor: {
-        "border-color": "#e3e3e3",
         "border-hover-color": "#696fdd",
+      },
+
+      borderColor: {
+        "border-color": "#e3e3e3",
+        "professional-border": "#a0a5f9",
+        "border-focus": "#696fdd",
       },
 
       textColor: {

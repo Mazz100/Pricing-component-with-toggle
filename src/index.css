@@ -3,7 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.test {
-  color: #f6f6fe !important;
-}
