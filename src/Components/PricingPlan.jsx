@@ -44,7 +44,7 @@ const PricingPlan = () => {
             {plan.features.map((feature, index) => (
               <li
                 className={clsx(
-                  "border-border-color border-t-[1px] p-3 text-sm font-semibold last-of-type:border-b-[1px]",
+                  "border-t-[1px] border-border-color p-3 text-sm font-semibold last-of-type:border-b-[1px]",
                   idx === 1 && "border-professional-border",
                 )}
                 key={index}
@@ -57,11 +57,13 @@ const PricingPlan = () => {
           <a
             className={clsx(
               "relative z-[1] block rounded-md bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90% p-3 text-xs font-semibold uppercase tracking-widest text-[#fff]",
+              //gradient pseudo on hover state
+              "before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:-z-[1] before:rounded-md before:bg-gradient-to-tl before:from-white before:to-white before:opacity-0 before:transition-opacity before:duration-150 before:ease-in hover:before:opacity-100",
               //Interactive states
-              "transition-[color] duration-150 ease-in hover:bg-none hover:text-[#696fdd] hover:ring-[1px] hover:ring-[#696fdd] focus-visible:outline-offset-4 focus-visible:outline-[#696fdd]",
+              "transition-colors duration-150 ease-in hover:text-[#696fdd] hover:ring-[1px] hover:ring-[#696fdd] focus-visible:outline-offset-4 focus-visible:outline-[#696fdd]",
               //professional plan link
               idx === 1 &&
-                "bg-white bg-none text-link-text-color hover:bg-[transparent] hover:text-[#fff] hover:ring-[1px] hover:ring-[#fff] focus-visible:outline-[#fff]",
+                "bg-white bg-none text-link-text-color before:content-none hover:bg-[transparent] hover:text-[#fff] hover:ring-[1px] hover:ring-[#fff] focus-visible:outline-[#fff]",
             )}
             href="#"
           >

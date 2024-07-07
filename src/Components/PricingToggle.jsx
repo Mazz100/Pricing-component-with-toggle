@@ -32,8 +32,8 @@ const PricingToggle = () => {
             className={clsx(
               //Switch background style
               "absolute left-0 right-full top-0 z-0 block h-full w-full rounded-2xl bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90%",
-              //Hover state
-              "peer-hover/yearly:from-interative-hover-bg peer-hover/monthly:from-interative-hover-bg peer-hover/monthly:from-100% peer-hover/yearly:from-100%",
+              //Hover state with pseudo
+              "before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:rounded-2xl before:bg-gradient-to-tl before:from-interative-hover-bg before:to-interative-hover-bg before:opacity-0 before:transition-opacity before:duration-150 before:ease-in peer-hover/monthly:from-100% peer-hover/yearly:from-100% before:peer-hover/monthly:opacity-100 before:peer-hover/yearly:opacity-100",
             )}
           ></span>
 
@@ -43,7 +43,7 @@ const PricingToggle = () => {
               //Switch-toggle style
               "absolute left-1/2 z-[2] block h-5 w-5 rounded-full bg-white transition-all duration-[0.2s] ease-out peer-checked/yearly:left-[2px]",
               //Focus state
-              "peer-focus/yearly:border-border-focus peer-focus/monthly:border-border-focus peer-focus/monthly:border-[1px] peer-focus/yearly:border-[1px]",
+              "peer-focus/monthly:border-[2px] peer-focus/yearly:border-[2px] peer-focus/monthly:border-border-focus peer-focus/yearly:border-border-focus",
             )}
           ></span>
         </span>
