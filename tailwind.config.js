@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "pattern-background":
-          "url(assets/images/bg-top.svg),url(assets/images/bg-bottom.svg)" /*top pattern - bottom pattern*/,
+          "url(assets/bg-top.svg),url(assets/bg-bottom.svg)" /*top pattern - bottom pattern*/,
       },
 
       backgroundPosition: {
