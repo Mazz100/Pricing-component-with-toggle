@@ -1,30 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { clsx } from "clsx";
 
-const PricingPlan = () => {
-  const plans = [
+const PricingPlan = ({ isYearly }) => {
+  const [pricingPlan, setPricingPlan] = useState([
     {
       type: "Basic",
-      price: "19.99",
+      month: "19.99",
+      year: "199.99",
       features: ["500 GB Storage", "2 Users Allowed", "Send up to 3 GB"],
     },
 
     {
       type: "Professional",
-      price: "24.99",
+      month: "24.99",
+      year: "244.99",
       features: ["1 TB Storage", "5 Users Allowed", "Send up to 10 GB"],
     },
 
     {
       type: "Master",
-      price: "39.99",
+      month: "39.99",
+      year: "399.99",
       features: ["2 TB Storage", "10 Users Allowed", "Send up to 20 GB"],
     },
-  ];
+  ]);
 
   return (
-    <div className="desktop:flex-row desktop:gap-0 flex w-full flex-col items-center gap-6 text-center">
-      {plans.map((plan, idx) => (
+    <div className="flex w-full flex-col items-center gap-6 text-center desktop:flex-row desktop:gap-0">
+      {pricingPlan.map((plan, idx) => (
         <div
           className={clsx(
             "w-full rounded-md bg-white p-7 text-text-main-color shadow-[0_6px_10px_3px_hsla(0,0%,70%,0.4)]",
@@ -37,7 +40,7 @@ const PricingPlan = () => {
           <h2 className="mb-4 font-bold">{plan.type}</h2>
           <p className="mb-4 inline-flex items-center gap-2 text-7xl font-bold">
             <span className="text-3xl">$</span>
-            {plan.price}
+            {isYearly ? plan.year : plan.month}
           </p>
 
           <ul className="my-6 flex flex-col gap-2">
