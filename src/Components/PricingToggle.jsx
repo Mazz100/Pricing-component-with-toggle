@@ -43,7 +43,7 @@ const PricingToggle = () => {
               //Switch-toggle style
               "absolute left-1/2 z-[2] block h-5 w-5 rounded-full bg-white transition-all duration-[0.2s] ease-out peer-checked/yearly:left-[2px]",
               //Focus state
-              "peer-focus/monthly:border-[2px] peer-focus/yearly:border-[2px] peer-focus/monthly:border-border-focus peer-focus/yearly:border-border-focus",
+              "peer-focus/monthly:border-border-toggle-focus peer-focus/yearly:border-border-toggle-focus peer-focus/monthly:border-[2px] peer-focus/yearly:border-[2px]",
             )}
           ></span>
         </span>

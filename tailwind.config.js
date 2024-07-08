@@ -4,8 +4,19 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "bg-top": "url(/src/images/bg-top.svg)",
-        "bg-bottom": "url(/src/images/bg-bottom.svg)",
+        "pattern-background":
+          "url(assets/images/bg-top.svg),url(assets/images/bg-bottom.svg)" /*top pattern - bottom pattern*/,
+      },
+
+      backgroundPosition: {
+        "pattern-position":
+          "top -25px right -150px,bottom left" /*bg top - bg bottom*/,
+        "pattern-position-default":
+          "top right,bottom left" /*bg top - bg bottom*/,
+      },
+
+      backgroundSize: {
+        "pattern-size": "80%,auto",
       },
 
       fontFamily: {
@@ -38,13 +49,19 @@ export default {
       borderColor: {
         "border-color": "#e3e3e3",
         "professional-border": "#a0a5f9",
-        "border-focus": "#696fdd",
+        "border-toggle-focus": "#696fdd",
       },
 
       textColor: {
         "link-text-color": "#696fdd",
         "text-main-color": "#494c5f",
         "secondary-color": "#6d708d",
+      },
+
+      //media queries breakpoints
+      screens: {
+        tablet: "40rem",
+        desktop: "64rem",
       },
     },
   },

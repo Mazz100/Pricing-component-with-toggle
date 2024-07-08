@@ -23,11 +23,11 @@ const PricingPlan = () => {
   ];
 
   return (
-    <div className="flex w-full flex-col items-center gap-6 text-center lg:flex-row lg:gap-0">
+    <div className="desktop:flex-row desktop:gap-0 flex w-full flex-col items-center gap-6 text-center">
       {plans.map((plan, idx) => (
         <div
           className={clsx(
-            "w-full rounded-md bg-white p-7 text-text-main-color shadow-md",
+            "w-full rounded-md bg-white p-7 text-text-main-color shadow-[0_6px_10px_3px_hsla(0,0%,70%,0.4)]",
             //Professional plan style
             idx === 1 &&
               "bg-gradient-to-tl from-bottom-right-gradient from-10% to-top-left-gradient to-90% text-white lg:py-10",
