@@ -30,7 +30,10 @@ const PricingToggle = (props) => {
             onChange={handleSelectedplan}
             checked={plan === yearlyValue}
             aria-checked={plan === yearlyValue}
-            className="peer/yearly relative z-[1] m-0 inline-block h-full w-1/2 cursor-pointer opacity-0"
+            className={clsx(
+              "peer/yearly absolute z-[1] m-0 inline-block h-full w-full cursor-pointer opacity-0",
+              plan === monthlyValue && "z-[2]",
+            )}
           />
           <input
             type="radio"
@@ -40,7 +43,11 @@ const PricingToggle = (props) => {
             onChange={handleSelectedplan}
             checked={plan === monthlyValue}
             aria-checked={plan === monthlyValue}
-            className="peer/monthly relative z-[1] m-0 inline-block h-full w-1/2 cursor-pointer opacity-0"
+            className={clsx(
+              "peer/monthly absolute z-[1] m-0 inline-block h-full w-full cursor-pointer opacity-0",
+              //fliping radio z-index for toggling
+              plan === yearlyValue && "z-[2]",
+            )}
           />
 
           <span
@@ -57,7 +64,7 @@ const PricingToggle = (props) => {
             aria-hidden={true}
             className={clsx(
               //Switch-toggle style
-              "absolute left-1/2 z-[2] block h-5 w-5 rounded-full bg-white transition-all duration-[0.2s] ease-out peer-checked/yearly:left-[2px]",
+              "absolute left-1/2 block h-5 w-5 rounded-full bg-white transition-all duration-[0.2s] ease-out peer-checked/yearly:left-[2px]",
               //Focus state
               "peer-focus/monthly:border-[2px] peer-focus/yearly:border-[2px] peer-focus/monthly:border-border-toggle-focus peer-focus/yearly:border-border-toggle-focus",
             )}

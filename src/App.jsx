@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import PricingPlan from "./Components/PricingPlan";
 import PricingToggle from "./Components/PricingToggle";
 import Footer from "./Components/Footer";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 export const planContext = createContext("");
 
 function App() {
@@ -10,13 +10,8 @@ function App() {
   const monthlyValue = "monthly plan";
 
   const [plan, setPlan] = useState(monthlyValue);
-  const [isYearly, setIsYearly] = useState(false);
 
-  useEffect(() => {
-    const yearlySelected = plan === yearlyValue;
-    setIsYearly(yearlySelected);
-    console.log(isYearly);
-  }, [plan]);
+  const isYearly = plan === yearlyValue;
 
   return (
     <>

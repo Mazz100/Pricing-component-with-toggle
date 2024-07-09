@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { clsx } from "clsx";
 
 const PricingPlan = ({ isYearly }) => {
-  const [pricingPlan, setPricingPlan] = useState([
+  const pricePlan = [
     {
       type: "Basic",
       month: "19.99",
@@ -23,11 +23,11 @@ const PricingPlan = ({ isYearly }) => {
       year: "399.99",
       features: ["2 TB Storage", "10 Users Allowed", "Send up to 20 GB"],
     },
-  ]);
+  ];
 
   return (
     <div className="flex w-full flex-col items-center gap-6 text-center desktop:flex-row desktop:gap-0">
-      {pricingPlan.map((plan, idx) => (
+      {pricePlan.map((plan, idx) => (
         <div
           className={clsx(
             "w-full rounded-md bg-white p-7 text-text-main-color shadow-[0_6px_10px_3px_hsla(0,0%,70%,0.4)]",

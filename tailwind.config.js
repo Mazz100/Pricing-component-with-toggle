@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "pattern-background":
-          "url(assets/bg-top.svg),url(assets/bg-bottom.svg)" /*top pattern - bottom pattern*/,
+          "url(./assets/bg-top.svg),url(./assets/bg-bottom.svg)" /*top pattern - bottom pattern*/,
       },
 
       backgroundPosition: {
@@ -53,7 +53,7 @@ export default {
       },
 
       textColor: {
-        "link-text-color": "#696fdd",
+        "link-text-color": "#595fda",
         "text-main-color": "#494c5f",
         "secondary-color": "#6d708d",
       },
