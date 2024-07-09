@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "pattern-background":
-          "url(./bg-top.svg),url(./bg-bottom.svg)" /*top pattern - bottom pattern*/,
+          "url(../bg-top.svg),url(../bg-bottom.svg)" /*top pattern - bottom pattern*/,
       },
 
       backgroundPosition: {
@@ -49,7 +49,7 @@ export default {
       borderColor: {
         "border-color": "#e3e3e3",
         "professional-border": "#a0a5f9",
-        "border-toggle-focus": "#696fdd",
+        "border-toggle-focus": "#999",
       },
 
       textColor: {

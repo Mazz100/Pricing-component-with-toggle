@@ -13,6 +13,7 @@ const PricingToggle = (props) => {
 
   return (
     <fieldset aria-label="pricing-switcher">
+      <legend className="sr-only">Price plan option</legend>
       <div className="my-10 flex items-center">
         <label
           htmlFor="yearly"
@@ -66,7 +67,7 @@ const PricingToggle = (props) => {
               //Switch-toggle style
               "absolute left-1/2 block h-5 w-5 rounded-full bg-white transition-all duration-[0.2s] ease-out peer-checked/yearly:left-[2px]",
               //Focus state
-              "peer-focus/monthly:border-[2px] peer-focus/yearly:border-[2px] peer-focus/monthly:border-border-toggle-focus peer-focus/yearly:border-border-toggle-focus",
+              "peer-focus-visible/monthly:shadow-[0_0_0_3px_#666] peer-focus-visible/yearly:shadow-[0_0_0_3px_#666]",
             )}
           ></span>
         </span>

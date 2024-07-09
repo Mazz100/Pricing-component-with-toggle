@@ -69,7 +69,11 @@ const PricingPlan = ({ isYearly }) => {
                 "bg-white bg-none text-link-text-color before:content-none hover:bg-[transparent] hover:text-[#fff] hover:ring-[1px] hover:ring-[#fff] focus-visible:outline-[#fff]",
             )}
             href="#"
+            aria-labelledby="plan type"
           >
+            <span className="sr-only" id="plan type">
+              {plan.type}
+            </span>
             Learn More
           </a>
         </div>
